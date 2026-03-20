@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://b6ag5bciy68jj" path="res://scenes/blue_platform.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://cpaslndyhnkp6" path="res://scenes/deathzone.tscn" id="4_iywne"]
-[ext_resource type="Script" uid="uid://b00a7u5i3h4l0" path="res://scripts/deathzone.gd" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://db41tkqjyv0fq" path="res://scenes/killzone_2.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -210,6 +209,7 @@ _data = {
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
+distance = -21.0
 
 [node name="Game" type="Node2D" unique_id=47904612]
 
@@ -241,17 +241,8 @@ position = Vector2(281, -187)
 libraries/ = SubResource("AnimationLibrary_iywne")
 autoplay = &"RESET"
 
-[node name="deathzone" parent="." unique_id=1699156013 instance=ExtResource("4_iywne")]
-position = Vector2(66, 64)
-script = ExtResource("5_p57ef")
+[node name="killzone2" parent="." unique_id=1856182413 instance=ExtResource("4_lbhrr")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone" unique_id=591896288]
-position = Vector2(42, -71)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone2" unique_id=1937316783]
+position = Vector2(66, 14)
 shape = SubResource("WorldBoundaryShape2D_iywne")
-
-[node name="Timer" type="Timer" parent="deathzone" unique_id=1466946441]
-wait_time = 0.6
-one_shot = true
-
-[connection signal="body_entered" from="deathzone" to="deathzone" method="_on_body_entered"]
-[connection signal="timeout" from="deathzone/Timer" to="deathzone" method="_on_timer_timeout"]
