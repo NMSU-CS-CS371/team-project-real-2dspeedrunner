@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b7vmj7cyeqx71" path="res://scenes/pause_menu.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://b6ag5bciy68jj" path="res://scenes/blue_platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://db41tkqjyv0fq" path="res://scenes/killzone_2.tscn" id="4_lbhrr"]
 
@@ -246,3 +247,7 @@ autoplay = &"RESET"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone2" unique_id=1937316783]
 position = Vector2(66, 14)
 shape = SubResource("WorldBoundaryShape2D_iywne")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1692549495]
+
+[node name="pause_menu" parent="CanvasLayer" unique_id=809333268 instance=ExtResource("3_iywne")]
