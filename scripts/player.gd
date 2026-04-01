@@ -95,18 +95,7 @@ func _physics_process(delta: float) -> void:
 	#left direction
 	elif direction < 0:
 		animated_sprite.flip_h = true
-	
-	#Play animations
-	#if not moving -> idle animation, else -> run animation
-	#if on floor then -> idle or run, else -> jump animation 
-	#if is_on_floor():
-		if velocity.x == 0:
-			animated_sprite.play("idle")
-		else:
-			animated_sprite.play("walk")
-	#else:
-		#animated_sprite.play("jump")
-	# Applies the movement
+
 	
 	if direction:
 		# Check if we're skidding (moving opposite to input)
@@ -120,3 +109,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 
 	move_and_slide()
+	
+		#Play animations
+	#if not moving -> idle animation, else -> run animation
+	#if on floor then -> idle or run, else -> jump animation 
+	if is_on_floor():
+		if (abs(velocity.x)<0.00001):
+			animated_sprite.play("idle")
+		else:
+			animated_sprite.play("walk")
+	#else:
+		#animated_sprite.play("jump")
+	# Applies the movement
