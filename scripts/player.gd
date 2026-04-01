@@ -99,13 +99,13 @@ func _physics_process(delta: float) -> void:
 	#Play animations
 	#if not moving -> idle animation, else -> run animation
 	#if on floor then -> idle or run, else -> jump animation 
-	if is_on_floor():
-		if direction == 0:
+	#if is_on_floor():
+		if velocity.x == 0:
 			animated_sprite.play("idle")
 		else:
-			animated_sprite.play("run")
-	else:
-		animated_sprite.play("jump")
+			animated_sprite.play("walk")
+	#else:
+		#animated_sprite.play("jump")
 	# Applies the movement
 	
 	if direction:
