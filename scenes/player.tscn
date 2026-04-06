@@ -84,9 +84,10 @@ z_index = 5
 position = Vector2(-1.000002, -13)
 scale = Vector2(0.13541669, 0.13541672)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"jump"
+animation = &"walk"
 autoplay = "idle"
-speed_scale = 0.5
+frame_progress = 0.28595266
+speed_scale = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918080275]
 position = Vector2(1, -12)
