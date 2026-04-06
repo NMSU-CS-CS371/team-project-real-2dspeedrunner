@@ -114,10 +114,10 @@ func _physics_process(delta: float) -> void:
 	#if not moving -> idle animation, else -> run animation
 	#if on floor then -> idle or run, else -> jump animation 
 	if is_on_floor():
-		if (abs(velocity.x)<0.00001):
+		if (abs(velocity.x)<0.0000001):
 			animated_sprite.play("idle")
 		else:
 			animated_sprite.play("walk")
-	#else:
-		#animated_sprite.play("jump")
+	else:
+		animated_sprite.play("jump")
 	# Applies the movement
