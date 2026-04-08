@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bf5lgm7dxsk6k"]
+
+[ext_resource type="AudioStream" uid="uid://ci34ab48cl3cv" path="res://funkyspacemusic.wav" id="1_1udxr"]
+[ext_resource type="PackedScene" uid="uid://1wsgc0h2ysx5" path="res://scenes/game.tscn" id="2_ei016"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1123832870]
+stream = ExtResource("1_1udxr")
+autoplay = true
+
+[node name="Game" parent="." unique_id=47904612 instance=ExtResource("2_ei016")]
