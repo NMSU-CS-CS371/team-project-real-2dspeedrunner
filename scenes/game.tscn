@@ -2,9 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://b7vmj7cyeqx71" path="res://scenes/pause_menu.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://b6ag5bciy68jj" path="res://scenes/blue_platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dl72sxxwv8ir4" path="res://scenes/killzone_2.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bpi51pxpa5itf" path="res://scenes/finish.tscn" id="6_p57ef"]
+
+[sub_resource type="GDScript" id="GDScript_p57ef"]
+script/source = "extends Node2D
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -213,6 +218,7 @@ _data = {
 distance = -1.0
 
 [node name="Game" type="Node2D" unique_id=47904612]
+script = SubResource("GDScript_p57ef")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=104669566]
 tile_set = SubResource("TileSet_lbhrr")
@@ -258,9 +264,10 @@ one_shot = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1692549495]
 
 [node name="pause_menu" parent="CanvasLayer" unique_id=809333268 instance=ExtResource("3_iywne")]
-offset_left = -121.0
-offset_top = -112.0
-offset_right = 230.0
-offset_bottom = 77.0
+
+[node name="finish" parent="." unique_id=740135826 instance=ExtResource("6_p57ef")]
+position = Vector2(767, -144)
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
 
 [connection signal="timeout" from="killzone2/Timer" to="killzone2" method="_on_timer_timeout"]

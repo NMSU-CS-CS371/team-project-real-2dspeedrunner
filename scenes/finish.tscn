@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bpi51pxpa5itf"]
+
+[ext_resource type="Script" uid="uid://b51rcgcfofo4t" path="res://scripts/finish.gd" id="1_07gpw"]
+[ext_resource type="Texture2D" uid="uid://dr1vk8o6wcva" path="res://brackeys_platformer_assets/sprites/End (Idle).png" id="1_yp4eo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt3yw"]
+size = Vector2(46, 44)
+
+[node name="finish" type="Area2D" unique_id=740135826]
+script = ExtResource("1_07gpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=731165390]
+texture_filter = 1
+texture = ExtResource("1_yp4eo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083564913]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_bt3yw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
