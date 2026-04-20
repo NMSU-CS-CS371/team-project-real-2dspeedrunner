@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 200.0
 const ACCELERATION = 1000.0   # How fast you reach max speed
 const FRICTION = 1200.0       # How fast you stop (higher = snappier stops)
 const SKID_FRICTION = 1800.0 # Extra friction when reversing direction (the "skid")
@@ -31,6 +30,9 @@ const AIR_CONTROL := 0.8
 var jump_buffer := 0.0
 #Timer that allows the players to jump shortly after leaving the ground
 var coyote_timer := 0.0
+var walk_speed=100
+var max_speed = 100.0
+var sprint_speed=200
 
 
 #ADDED NEW ACTIONS 
@@ -44,6 +46,7 @@ var coyote_timer := 0.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
+
 func _process(delta: float) -> void:
 	# Reads input here
 	if Input.is_action_just_pressed("jump")  or Input.is_action_just_pressed("ui_up"):
@@ -51,6 +54,11 @@ func _process(delta: float) -> void:
 		
 
 func _physics_process(delta: float) -> void:
+	#sprint
+	if Input.is_action_pressed("sprint"):
+		max_speed=sprint_speed
+	else:
+		max_speed=walk_speed
 	# Gravity
 	if not is_on_floor():
 		var gravity = get_gravity()
@@ -103,7 +111,7 @@ func _physics_process(delta: float) -> void:
 		if is_skidding:
 			velocity.x = move_toward(velocity.x, 0, SKID_FRICTION * delta)
 		else:
-			velocity.x = move_toward(velocity.x, direction * MAX_SPEED, ACCELERATION * delta)
+			velocity.x = move_toward(velocity.x, direction * max_speed, ACCELERATION * delta)
 	else:
 		# No input — apply friction to slow down
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
