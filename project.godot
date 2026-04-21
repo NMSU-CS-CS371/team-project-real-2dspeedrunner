@@ -23,6 +23,10 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="Platformer"
 
+[global_group]
+
+stopwatch=""
+
 [input]
 
 jump={
