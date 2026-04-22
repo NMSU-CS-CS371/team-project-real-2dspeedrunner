@@ -57,8 +57,8 @@ func _physics_process(delta: float) -> void:
 	#sprint
 	if Input.is_action_pressed("sprint"):
 		max_speed=sprint_speed
-	else:
-		max_speed=walk_speed
+		get_node("Timer").start()
+		print("begin sprinting")
 	# Gravity
 	if not is_on_floor():
 		var gravity = get_gravity()
@@ -129,3 +129,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.play("jump")
 	# Applies the movement
+
+
+func _on_timer_timeout() -> void:
+	max_speed=walk_speed
+	print("tired")
+	pass # Replace with function body.

@@ -249,6 +249,9 @@ limit_bottom = 140
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="Timer" type="Timer" parent="player" unique_id=647616407]
+wait_time = 2.0
+
 [node name="bluePlatform" parent="." unique_id=1961786961 instance=ExtResource("3_lnu2h")]
 position = Vector2(290, -100)
 
@@ -280,4 +283,5 @@ position = Vector2(768, -144)
 scale = Vector2(0.5, 0.5)
 collision_mask = 2
 
+[connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone2/Timer" to="killzone2" method="_on_timer_timeout"]
