@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://bmncrprtcr0i" path="res://scenes/hud.tscn" id="3_0tnpc"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="3_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://b7vmj7cyeqx71" path="res://scenes/pause_menu.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://b6ag5bciy68jj" path="res://scenes/blue_platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dl72sxxwv8ir4" path="res://scenes/killzone_2.tscn" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://icquqad8k0u1" path="res://scenes/stopwatch.tscn" id="4_vtaks"]
+[ext_resource type="PackedScene" path="res://scenes/stopwatch.tscn" id="4_vtaks"]
 [ext_resource type="AudioStream" uid="uid://ci34ab48cl3cv" path="res://funkyspacemusic.wav" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bpi51pxpa5itf" path="res://scenes/finish.tscn" id="7_u5sy4"]
 
@@ -228,13 +228,9 @@ layer_1/tile_data = PackedInt32Array(-65535, 458752, 1, -65536, 458752, 1, -6553
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1692549495]
 
-[node name="pause_menu" parent="CanvasLayer" unique_id=809333268 instance=ExtResource("3_iywne")]
-offset_left = -121.0
-offset_top = -112.0
-offset_right = 230.0
-offset_bottom = 77.0
-
 [node name="HUD" parent="CanvasLayer" unique_id=2050148801 instance=ExtResource("3_0tnpc")]
+
+[node name="pause_menu" parent="CanvasLayer" unique_id=809333268 instance=ExtResource("3_iywne")]
 
 [node name="Stopwatch" parent="." unique_id=698125718 instance=ExtResource("4_vtaks")]
 
