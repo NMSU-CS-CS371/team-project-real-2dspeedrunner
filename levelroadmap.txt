@@ -1,0 +1,33 @@
+Platformer 2d:
+Current plan (feel free to change if you want but make sure to tell the discord):
+ALSO will update as they are completed, write 'COMPLETED' or something. 
+
+CURRENT PROGRESS: Level 1
+
+Level 1 Design Plans:
+- THEME: SKY ISLANDS, to try and avoid walljumping tech early game
+- TIME: ~3 minutes, preferably short as we can introduce the basic movements 
+- MOVEMENT: Variable jump (high and low), Using jump + dash (larger areas to cover)
+- GOAL: To go from platform to platform to learn basic movements and get a feel for the game
+
+Level 2 Design Plans:
+- THEME: CAVE?, could change but with the text pack I have it will work. If you have better ideas or have another pack lmk. 
+- TIME: ~5 minutes, somewhat long to build the confidence of the player while also pushing harder challenges to the player. Not too hard so basic obstacles. 
+- MOVEMENT: Introduce wall jumping, maybe implement dash bars? meaning that players are limit by dash (theme being that they can't breathe too well or something) while also using more combos of dash + jump + sprint
+- GOAL: To challenge the player and introduce NEW ENVIRONMENT CHANGES, things like moving tiles or enemies can start to be introduced
+
+Level 3 Design Plans:
+- THEME: DUNGEON?, could change as well (maybe like a hell theme level) but again it's inside of the text pack I bought so it will work. 
+- TIME: ~8 minutes, could be shorter depending on how hard it is. But this is meant to be the 'final level' so it should be fairly challenging. 
+- MOVEMENT: Introduce more dash tech (dash-cancelling and other movement tech). Have the player start to explore the limits of the movement where they have to do things almost perfect (keyword 'almost' so not TOO hard)
+- GOAL: To maximize the difficulty to the player without making them discouraged (where they know it's possible but it's hard to execute). 
+
+MOVEMENT:
+- Dash
+- Jump
+- Wall Jump
+
+MECHANICS:
+- dash cancel
+
+Please feel free to write ideas in here so that we can all look at this. 
