@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjd4u6fn84oc5"
+path="res://.godot/imported/Wood_Breaking_1.ogg-ff57fa3d50572e6d717ef36bee214576.oggvorbisstr"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/OGG/Wood_Breaking_1.ogg"
+dest_files=["res://.godot/imported/Wood_Breaking_1.ogg-ff57fa3d50572e6d717ef36bee214576.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

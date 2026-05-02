@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cihrylroc01qq"
+path="res://.godot/imported/UI_Button_Click_1.wav-6b1bffc10fd55085d9d11d6b7a33d071.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/UI_Button_Click_1.wav"
+dest_files=["res://.godot/imported/UI_Button_Click_1.wav-6b1bffc10fd55085d9d11d6b7a33d071.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

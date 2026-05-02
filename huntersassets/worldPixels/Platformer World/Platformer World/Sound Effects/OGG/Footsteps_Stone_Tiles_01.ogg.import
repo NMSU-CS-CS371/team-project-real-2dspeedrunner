@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f7h7ex40j8m4"
+path="res://.godot/imported/Footsteps_Stone_Tiles_01.ogg-d7ffb176928e2d3d55a64c875e456719.oggvorbisstr"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/OGG/Footsteps_Stone_Tiles_01.ogg"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_01.ogg-d7ffb176928e2d3d55a64c875e456719.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

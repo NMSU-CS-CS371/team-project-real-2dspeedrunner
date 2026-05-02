@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://i3sco1hjucl0"
+path="res://.godot/imported/Footsteps_Stone_Tiles_04.wav-a5531aa876aa5dd9153f658cf6f30f78.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/Footsteps_Stone_Tiles_04.wav"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_04.wav-a5531aa876aa5dd9153f658cf6f30f78.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

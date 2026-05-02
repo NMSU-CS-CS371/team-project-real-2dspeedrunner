@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjvmenn2hvh2"
+path="res://.godot/imported/UI_Button_Click_1.mp3-ccd48fe5b58c6fc47a6530be7764b483.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/UI_Button_Click_1.mp3"
+dest_files=["res://.godot/imported/UI_Button_Click_1.mp3-ccd48fe5b58c6fc47a6530be7764b483.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

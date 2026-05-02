@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cngb03pruc6di"
+path="res://.godot/imported/Traps_Arrow_1.mp3-65921ff7a2b62f33860dd1782c0c4f72.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Traps_Arrow_1.mp3"
+dest_files=["res://.godot/imported/Traps_Arrow_1.mp3-65921ff7a2b62f33860dd1782c0c4f72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

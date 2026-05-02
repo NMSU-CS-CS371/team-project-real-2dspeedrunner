@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bh8dxqnhc60qn"
+path="res://.godot/imported/Footsteps_Stone_Tiles_01.mp3-bf4e9b536796e2c247d18cea4b12b8d1.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Footsteps_Stone_Tiles_01.mp3"
+dest_files=["res://.godot/imported/Footsteps_Stone_Tiles_01.mp3-bf4e9b536796e2c247d18cea4b12b8d1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

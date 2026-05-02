@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cof0htuu362tm"
+path="res://.godot/imported/Door_Open.mp3-0ceb5e61f03129167baaba28b22a9fe1.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Door_Open.mp3"
+dest_files=["res://.godot/imported/Door_Open.mp3-0ceb5e61f03129167baaba28b22a9fe1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

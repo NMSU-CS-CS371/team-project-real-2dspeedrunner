@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bklokw5da2dbu"
+path="res://.godot/imported/Vases_Breaking_1.wav-b64bbf940eeeb58b690369852c240341.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/Vases_Breaking_1.wav"
+dest_files=["res://.godot/imported/Vases_Breaking_1.wav-b64bbf940eeeb58b690369852c240341.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

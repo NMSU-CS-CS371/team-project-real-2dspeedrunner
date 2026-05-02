@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b108gi48tghs7"
+path="res://.godot/imported/Door_Open.ogg-8c675f93c8f9318ef9dd93a93c9d4c86.oggvorbisstr"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/OGG/Door_Open.ogg"
+dest_files=["res://.godot/imported/Door_Open.ogg-8c675f93c8f9318ef9dd93a93c9d4c86.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

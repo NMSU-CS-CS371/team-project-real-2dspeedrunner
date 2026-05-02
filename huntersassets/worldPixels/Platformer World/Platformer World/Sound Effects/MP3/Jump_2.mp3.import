@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnjqor4gnaxbt"
+path="res://.godot/imported/Jump_2.mp3-b449ba772f22caff4e43e57c18aeff7f.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Jump_2.mp3"
+dest_files=["res://.godot/imported/Jump_2.mp3-b449ba772f22caff4e43e57c18aeff7f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4xxulmt3721r"
+path="res://.godot/imported/Wood_Breaking_1.mp3-eec846fa94dfabe39b4c0a724b2263b5.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Wood_Breaking_1.mp3"
+dest_files=["res://.godot/imported/Wood_Breaking_1.mp3-eec846fa94dfabe39b4c0a724b2263b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

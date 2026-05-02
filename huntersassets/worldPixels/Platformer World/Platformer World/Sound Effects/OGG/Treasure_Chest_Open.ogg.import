@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgu85yqfm0ayf"
+path="res://.godot/imported/Treasure_Chest_Open.ogg-4f6abb0bf5187f995e065d359d56d2ff.oggvorbisstr"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/OGG/Treasure_Chest_Open.ogg"
+dest_files=["res://.godot/imported/Treasure_Chest_Open.ogg-4f6abb0bf5187f995e065d359d56d2ff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://us8f0ni3qxrh"
+path="res://.godot/imported/Treasure_Chest_Open.wav-dad63c777b12efd3e4744904778a5a85.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/Treasure_Chest_Open.wav"
+dest_files=["res://.godot/imported/Treasure_Chest_Open.wav-dad63c777b12efd3e4744904778a5a85.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

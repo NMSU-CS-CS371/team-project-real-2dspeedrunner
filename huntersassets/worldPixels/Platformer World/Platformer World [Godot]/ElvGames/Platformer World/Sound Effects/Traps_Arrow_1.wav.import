@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds3t5kfd85tvl"
+path="res://.godot/imported/Traps_Arrow_1.wav-4ac101c320f9886a143434a171fc2fb1.sample"
+
+[deps]
+
+source_file="res://ElvGames/Platformer World/Sound Effects/Traps_Arrow_1.wav"
+dest_files=["res://.godot/imported/Traps_Arrow_1.wav-4ac101c320f9886a143434a171fc2fb1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://oncoowimuqtt"
+path="res://.godot/imported/Item_Acquire_1.wav-e2053904df54da5a097e205afe497ae0.sample"
+
+[deps]
+
+source_file="res://ElvGames/Platformer World/Sound Effects/Item_Acquire_1.wav"
+dest_files=["res://.godot/imported/Item_Acquire_1.wav-e2053904df54da5a097e205afe497ae0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

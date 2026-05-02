@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1e87wkxv52cn"
+path="res://.godot/imported/UI_Keypad_1.mp3-82dfae3e8c11f9d88ee3bc4b17492259.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/UI_Keypad_1.mp3"
+dest_files=["res://.godot/imported/UI_Keypad_1.mp3-82dfae3e8c11f9d88ee3bc4b17492259.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

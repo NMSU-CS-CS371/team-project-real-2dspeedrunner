@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdu3064wui8q1"
+path="res://.godot/imported/Bag_Close_3.wav-a5037cdf57c50ec4c46ed03b46ce2132.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/Bag_Close_3.wav"
+dest_files=["res://.godot/imported/Bag_Close_3.wav-a5037cdf57c50ec4c46ed03b46ce2132.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

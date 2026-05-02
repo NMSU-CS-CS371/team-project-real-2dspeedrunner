@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcqjjqprrvdgx"
+path="res://.godot/imported/Wood_Breaking_1.wav-78e45bca6e77bd5e75db0919fd286968.sample"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/WAV/Wood_Breaking_1.wav"
+dest_files=["res://.godot/imported/Wood_Breaking_1.wav-78e45bca6e77bd5e75db0919fd286968.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

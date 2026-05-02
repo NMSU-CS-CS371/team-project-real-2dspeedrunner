@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk100drsepem7"
+path="res://.godot/imported/Treasure_Chest_Open.wav-43a83f025a617b13aec28bb2f168383b.sample"
+
+[deps]
+
+source_file="res://ElvGames/Platformer World/Sound Effects/Treasure_Chest_Open.wav"
+dest_files=["res://.godot/imported/Treasure_Chest_Open.wav-43a83f025a617b13aec28bb2f168383b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

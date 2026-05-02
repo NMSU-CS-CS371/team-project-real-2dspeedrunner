@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bh12067n0jv86"
+path="res://.godot/imported/Item_Acquire_1.mp3-e2348d4a685c8c82eb509e794166b96e.mp3str"
+
+[deps]
+
+source_file="res://huntersassets/worldPixels/Platformer World/Platformer World/Sound Effects/MP3/Item_Acquire_1.mp3"
+dest_files=["res://.godot/imported/Item_Acquire_1.mp3-e2348d4a685c8c82eb509e794166b96e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
