@@ -2580,7 +2580,7 @@ size = Vector2(5, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4dsi"]
 size = Vector2(232, 12)
 
-[node name="level1" type="Node2D" unique_id=47904612]
+[node name="level3" type="Node2D" unique_id=47904612]
 position = Vector2(13, -652)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=104669566]
