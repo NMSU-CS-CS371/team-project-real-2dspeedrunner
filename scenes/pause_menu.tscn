@@ -52,6 +52,8 @@ atlas = ExtResource("3_kukqi")
 region = Rect2(89.556244, 34.611332, 56, 26.222225)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofnjo"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(89.111786, 35.944664, 55.555557, 25.777779)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1rgno"]
 atlas = ExtResource("5_7l7mv")
