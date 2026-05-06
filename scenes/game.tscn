@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://bjxgqtpcn6yxi" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_07.png" id="2_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bqo67b0fdeehj" path="res://scenes/hud.tscn" id="3_0tnpc"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://b7vmj7cyeqx71" path="res://scenes/pause_menu.tscn" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://dhl3605l0bpxf" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_10.png" id="3_kvuet"]
 [ext_resource type="PackedScene" uid="uid://dl72sxxwv8ir4" path="res://scenes/killzone_2.tscn" id="4_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cchv433d1i31n" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_12.png" id="4_trtic"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dg4etsp164txx" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Backgrounds/PS_Tileset_07_Background02.png" id="7_rysoc"]
 [ext_resource type="PackedScene" uid="uid://bpi51pxpa5itf" path="res://scenes/finish.tscn" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://bfwehvkxnqlfy" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Item Icons/PS_Items.png" id="8_ir15t"]
-[ext_resource type="PackedScene" uid="uid://bqen64u8ymkhd" path="res://scenes/Checkpoint.tscn" id="16_ca42v"]
+[ext_resource type="PackedScene" path="res://scenes/Checkpoint.tscn" id="16_ca42v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")

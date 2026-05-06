@@ -2,43 +2,68 @@
 
 [ext_resource type="Script" uid="uid://m7h34chwggqv" path="res://scripts/pause_menu.gd" id="1_myx47"]
 [ext_resource type="Texture2D" uid="uid://8gfwxa5xbwg" path="res://homemade/pause_screen.png" id="2_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://dmu8w6wsvkgsw" path="res://homemade/resumelevels.png" id="3_kukqi"]
+[ext_resource type="Texture2D" uid="uid://cbxqrvcmqydm5" path="res://homemade/restart.png" id="4_5d2l8"]
+[ext_resource type="Texture2D" uid="uid://dcjlt7mgsylu8" path="res://homemade/quit.png" id="5_7l7mv"]
 
 [sub_resource type="Animation" id="Animation_kukqi"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_5d2l8"]
 resource_name = "blur"
 length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7l7mv"]
 _data = {
 &"RESET": SubResource("Animation_kukqi"),
 &"blur": SubResource("Animation_5d2l8")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d2l8"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(6.2222223, 4, 71.27778, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l7mv"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(5.7777786, 30.444447, 70.666664, 24.88889)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4r4p"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(5.111786, 31.500221, 72, 24.444443)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s2dm"]
+atlas = ExtResource("4_5d2l8")
+region = Rect2(6.445122, 1.7224426, 72.44445, 26.666668)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88e76"]
+atlas = ExtResource("4_5d2l8")
+region = Rect2(10.000675, 36.38911, 72.8889, 26.666668)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knqa7"]
+atlas = ExtResource("4_5d2l8")
+region = Rect2(10.445122, 35.055775, 73.333336, 31.11111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71k7c"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(88.2229, 3.0557766, 55.555557, 26.222223)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmnsq"]
+atlas = ExtResource("3_kukqi")
+region = Rect2(89.556244, 34.611332, 56, 26.222225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofnjo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rgno"]
+atlas = ExtResource("5_7l7mv")
+region = Rect2(111.77846, 11.944666, 46.66667, 31.111109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hnlu"]
+atlas = ExtResource("5_7l7mv")
+region = Rect2(113.556244, 43.055775, 47.1111, 31.11111)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o3g3"]
+atlas = ExtResource("5_7l7mv")
+region = Rect2(111.334015, 43.055775, 48.444443, 32.88889)
 
 [node name="pause_menu" type="Control" unique_id=809333268]
 process_mode = 3
@@ -50,6 +75,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_myx47")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2013233893]
+layout_mode = 0
+offset_left = -141.0
+offset_top = -89.0
+offset_right = 1268.0
+offset_bottom = 691.0
+color = Color(0.5294118, 0.79607844, 0.9098039, 0.7647059)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1562148392]
 layout_mode = 0
 offset_left = -7.0
@@ -57,70 +90,54 @@ offset_right = 1160.0
 offset_bottom = 659.0
 texture = ExtResource("2_5d2l8")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=758685402]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -182.0
-offset_right = 250.0
-offset_bottom = 182.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
-
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=625198134]
-process_mode = 3
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Resume"
-
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=26217806]
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Restart"
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1306664249]
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Levels
-
-"
-
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=581760628]
-layout_mode = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Quit
-"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1175117075]
 libraries/ = SubResource("AnimationLibrary_7l7mv")
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_quit_pressed"]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1158181182]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 181.0
+offset_right = 612.0
+offset_bottom = 260.0
+texture_normal = SubResource("AtlasTexture_5d2l8")
+texture_pressed = SubResource("AtlasTexture_7l7mv")
+texture_hover = SubResource("AtlasTexture_v4r4p")
+stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=2109485024]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 260.0
+offset_right = 627.0
+offset_bottom = 333.0
+texture_normal = SubResource("AtlasTexture_1s2dm")
+texture_pressed = SubResource("AtlasTexture_88e76")
+texture_hover = SubResource("AtlasTexture_knqa7")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1177977188]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 340.0
+offset_right = 583.0
+offset_bottom = 399.0
+texture_normal = SubResource("AtlasTexture_71k7c")
+texture_pressed = SubResource("AtlasTexture_cmnsq")
+texture_hover = SubResource("AtlasTexture_ofnjo")
+stretch_mode = 0
+
+[node name="TextureButton4" type="TextureButton" parent="." unique_id=1928547545]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 403.0
+offset_right = 584.0
+offset_bottom = 476.0
+texture_normal = SubResource("AtlasTexture_1rgno")
+texture_pressed = SubResource("AtlasTexture_4hnlu")
+texture_hover = SubResource("AtlasTexture_3o3g3")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_resume2_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_restart2_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_levels2_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_quit2_pressed"]
