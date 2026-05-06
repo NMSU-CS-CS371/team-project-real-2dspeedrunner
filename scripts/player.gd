@@ -19,7 +19,7 @@ const FALL_GRAVITY_MULTIPLIER := 1.3
 const AIR_CONTROL := 0.8
 
 # Level 1: no double jump yet
-const MAX_JUMPS := 1
+const MAX_JUMPS := 2
 var jumps_left := MAX_JUMPS
 
 # Wall jump (Level 1)
