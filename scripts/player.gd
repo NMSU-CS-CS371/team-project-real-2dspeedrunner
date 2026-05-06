@@ -52,12 +52,11 @@ var max_speed := WALK_SPEED
 # Cached wall normal from last slide
 var cached_wall_normal := Vector2.ZERO
 
-
-
 # --------------------
 # Checkpoint / Respawn
 # --------------------
 var respawn_position: Vector2
+var is_dead := false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var sprint_timer: Timer = $Timer
@@ -70,12 +69,20 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if is_dead:
+		return
+
 	# Buffer jump presses (works for both "jump" and "ui_up")
 	if event.is_action_pressed("jump") or event.is_action_pressed("ui_up"):
 		jump_buffer = JUMP_BUFFER_TIME
 
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+
 	# --------------------------------
 	# Timers
 	# --------------------------------
@@ -233,13 +240,19 @@ func _update_cached_wall_normal() -> void:
 
 
 func _play_anim() -> void:
+	if is_dead:
+		return
+
 	if is_on_floor():
 		if abs(velocity.x) < 0.01:
-			animated_sprite.play("idle")
+			animated_sprite.play("idle_2")
 		else:
-			animated_sprite.play("walk")
+			animated_sprite.play("walk_2")
 	else:
-		animated_sprite.play("jump")
+		if velocity.y < 0.0:
+			animated_sprite.play("jump_2")
+		else:
+			animated_sprite.play("fall_2")
 
 
 # --------------------
@@ -253,8 +266,27 @@ func set_checkpoint(pos: Vector2) -> void:
 func respawn() -> void:
 	global_position = respawn_position
 	velocity = Vector2.ZERO
+	is_dead = false
+	is_dashing = false
+	jump_buffer = 0.0
+	coyote_timer = 0.0
+	wall_jump_lock = 0.0
+	cached_wall_normal = Vector2.ZERO
+	animated_sprite.play("idle_2")
 
 
 func die() -> void:
+	if is_dead:
+		return
+
+	is_dead = true
 	print("Respawn at: ", respawn_position)
+
+	velocity = Vector2.ZERO
+	animated_sprite.play("damage_2")
+	await animated_sprite.animation_finished
+
+	animated_sprite.play("dead_2")
+	await animated_sprite.animation_finished
+
 	respawn()
