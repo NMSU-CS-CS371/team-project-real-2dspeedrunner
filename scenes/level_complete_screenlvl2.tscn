@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpqyewymnr7x8" path="res://scripts/level_complete_screenlvl_2.gd" id="1_wpq0q"]
 [ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="2_b6vrh"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_35ovi"]
-load_path = "res://.godot/imported/main_menu_background.jpg-c9f3c6d42bea1a29c7aefe0b64d70004.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcvgn"]
-texture = SubResource("CompressedTexture2D_35ovi")
-modulate_color = Color(0.33809972, 0.3380997, 0.33809966, 1)
+[ext_resource type="Texture2D" uid="uid://chelcloxljk51" path="res://pixilart-drawing.png" id="2_sdtf2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du5ev"]
 bg_color = Color(3.6521525, 3.6521523, 3.6521513, 1)
@@ -52,14 +46,11 @@ grow_vertical = 2
 script = ExtResource("1_wpq0q")
 time_label = NodePath("time_label")
 
-[node name="Panel" type="Panel" parent="." unique_id=433185460]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_mcvgn")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1824173231]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 647.0
+texture = ExtResource("2_sdtf2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=723791310]
 layout_mode = 1
