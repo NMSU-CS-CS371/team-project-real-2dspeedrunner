@@ -1558,6 +1558,9 @@ sources/7 = SubResource("TileSetAtlasSource_5newe")
 a = Vector2(-408, 3)
 b = Vector2(1575, 4)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rysoc"]
+radius = 24.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ca42v"]
 radius = 24.0
 
@@ -1721,10 +1724,10 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6),
+"times": PackedFloat32Array(0.2, 1.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2792, 184), Vector2(2792, 392)]
@@ -2044,6 +2047,18 @@ position = Vector2(-1, -2)
 shape = SubResource("SegmentShape2D_ir15t")
 
 [node name="Timer" type="Timer" parent="killzone3" unique_id=1036421430]
+wait_time = 0.6
+one_shot = true
+
+[node name="killzone7" parent="." unique_id=839133344 instance=ExtResource("4_lbhrr")]
+position = Vector2(1644, -59)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone7" unique_id=1132526807]
+position = Vector2(-4, -61)
+shape = SubResource("CircleShape2D_rysoc")
+
+[node name="Timer" type="Timer" parent="killzone7" unique_id=1822072749]
 wait_time = 0.6
 one_shot = true
 
@@ -3151,6 +3166,7 @@ position = Vector2(-3, 6)
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone2/Timer" to="killzone2" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone3/Timer" to="killzone3" method="_on_timer_timeout"]
+[connection signal="timeout" from="killzone7/Timer" to="killzone7" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone6/Timer" to="killzone6" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone4/Timer" to="killzone4" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone5/Timer" to="killzone5" method="_on_timer_timeout"]
