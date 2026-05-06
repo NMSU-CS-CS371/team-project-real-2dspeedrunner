@@ -12,6 +12,10 @@ region = Rect2(5.5, 57, 33, 34)
 atlas = ExtResource("3_rif6e")
 region = Rect2(47.5, 49, 32, 40)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2epne"]
+atlas = ExtResource("3_rif6e")
+region = Rect2(49, 49.833668, 30, 35.33334)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nqmc"]
 atlas = ExtResource("3_rif6e")
 region = Rect2(2.5, 0, 33, 32)
@@ -19,6 +23,10 @@ region = Rect2(2.5, 0, 33, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7plkq"]
 atlas = ExtResource("3_rif6e")
 region = Rect2(39.5, 0, 34, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rif6e"]
+atlas = ExtResource("3_rif6e")
+region = Rect2(41, -0.16633224, 29.333328, 34)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckc44"]
 atlas = ExtResource("3_rif6e")
@@ -28,6 +36,10 @@ region = Rect2(90.5, 9, 35, 33)
 atlas = ExtResource("3_rif6e")
 region = Rect2(88.5, 46, 37, 34)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4mbh"]
+atlas = ExtResource("3_rif6e")
+region = Rect2(90.33333, 47.833668, 32, 30.666668)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_htctk"]
 atlas = ExtResource("3_rif6e")
 region = Rect2(128.5, 30, 31, 29)
@@ -35,6 +47,10 @@ region = Rect2(128.5, 30, 31, 29)
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6tf7"]
 atlas = ExtResource("3_rif6e")
 region = Rect2(141.5, 62, 27, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rovvv"]
+atlas = ExtResource("3_rif6e")
+region = Rect2(141, 64.500336, 28.666656, 26.499664)
 
 [node name="level_select" type="Control" unique_id=431174127]
 layout_mode = 3
@@ -59,6 +75,7 @@ offset_right = 411.0
 offset_bottom = 399.0
 texture_normal = SubResource("AtlasTexture_chg43")
 texture_pressed = SubResource("AtlasTexture_r77uv")
+texture_hover = SubResource("AtlasTexture_2epne")
 stretch_mode = 0
 
 [node name="TextureButton2" type="TextureButton" parent="." unique_id=834499632]
@@ -69,6 +86,7 @@ offset_right = 657.0
 offset_bottom = 406.0
 texture_normal = SubResource("AtlasTexture_4nqmc")
 texture_pressed = SubResource("AtlasTexture_7plkq")
+texture_hover = SubResource("AtlasTexture_rif6e")
 stretch_mode = 1
 
 [node name="TextureButton3" type="TextureButton" parent="." unique_id=1595823688]
@@ -79,6 +97,7 @@ offset_right = 926.0
 offset_bottom = 404.0
 texture_normal = SubResource("AtlasTexture_ckc44")
 texture_pressed = SubResource("AtlasTexture_o2xx4")
+texture_hover = SubResource("AtlasTexture_u4mbh")
 stretch_mode = 0
 
 [node name="TextureButton4" type="TextureButton" parent="." unique_id=2144291778]
@@ -89,6 +108,7 @@ offset_right = 1141.0
 offset_bottom = 623.0
 texture_normal = SubResource("AtlasTexture_htctk")
 texture_pressed = SubResource("AtlasTexture_s6tf7")
+texture_hover = SubResource("AtlasTexture_rovvv")
 stretch_mode = 0
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_lvl1_pressed"]

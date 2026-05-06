@@ -3,38 +3,44 @@
 [ext_resource type="Script" uid="uid://cldxy1kxi1mg0" path="res://scripts/level_complete_screen.gd" id="1_rbv35"]
 [ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="2_35ovi"]
 [ext_resource type="Texture2D" uid="uid://crjch4yg5ax5v" path="res://homemade/lvl_complete_bkgrd.png" id="2_mcvgn"]
+[ext_resource type="Texture2D" uid="uid://cbxqrvcmqydm5" path="res://homemade/restart.png" id="4_mtba6"]
+[ext_resource type="Texture2D" uid="uid://cv53itcw36cvs" path="res://homemade/nextmenu.png" id="5_dfv75"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du5ev"]
-bg_color = Color(3.6521525, 3.6521523, 3.6521513, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6vda"]
+atlas = ExtResource("4_mtba6")
+region = Rect2(7.5, 2, 72, 28)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mtba6"]
-bg_color = Color(0.4724152, 0.47241515, 0.47241515, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8veq4"]
+atlas = ExtResource("4_mtba6")
+region = Rect2(10.5, 36, 74, 27)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dfv75"]
-bg_color = Color(0.7279856, 0.7279857, 0.7279856, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0nm1"]
+atlas = ExtResource("4_mtba6")
+region = Rect2(11.5, 37, 74, 31)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6vda"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_17gge"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(93.5, 2, 54, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g34y"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(73.5, 36, 55, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omd8e"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(74.5, 35, 51, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ersuk"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(0, 41, 48.5, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miam8"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(42.28232, 65.21749, 49.251022, 22.782509)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwxdw"]
+atlas = ExtResource("5_dfv75")
+region = Rect2(42.66667, 64.66667, 46, 26.333328)
 
 [node name="level_complete_screen" type="Control" unique_id=1896683044 node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -52,63 +58,6 @@ offset_right = 1151.0
 offset_bottom = 647.0
 texture = ExtResource("2_mcvgn")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=723791310]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -181.0
-offset_top = -289.0
-offset_right = 181.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 8
-
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1023080454]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_du5ev")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mtba6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dfv75")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_m6vda")
-text = "Restart"
-
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=907185328]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_du5ev")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mtba6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dfv75")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_m6vda")
-text = "Next Level"
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=730416462]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_du5ev")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mtba6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_dfv75")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_m6vda")
-text = "Main Menu"
-
 [node name="time_label" type="Label" parent="." unique_id=810232491]
 layout_mode = 1
 anchors_preset = 5
@@ -125,6 +74,49 @@ text = "00:00:000"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_main_menu_pressed"]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1638481520]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38300002
+anchor_top = 0.522
+anchor_right = 0.614
+anchor_bottom = 0.638
+offset_left = -0.21600342
+offset_top = 96.74399
+offset_right = 22.671997
+offset_bottom = 128.57599
+texture_normal = SubResource("AtlasTexture_m6vda")
+texture_pressed = SubResource("AtlasTexture_8veq4")
+texture_hover = SubResource("AtlasTexture_t0nm1")
+stretch_mode = 1
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=720710851]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39200002
+anchor_top = 0.81500006
+anchor_right = 0.6
+anchor_bottom = 0.94000006
+offset_left = 1.4159851
+offset_top = 11.879944
+offset_right = 16.799988
+offset_bottom = 42.879944
+texture_normal = SubResource("AtlasTexture_17gge")
+texture_pressed = SubResource("AtlasTexture_5g34y")
+texture_hover = SubResource("AtlasTexture_omd8e")
+stretch_mode = 0
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1275902344]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 314.0
+offset_right = 687.0
+offset_bottom = 425.0
+texture_normal = SubResource("AtlasTexture_ersuk")
+texture_pressed = SubResource("AtlasTexture_miam8")
+texture_hover = SubResource("AtlasTexture_qwxdw")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_restart2_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_next_pressed"]
