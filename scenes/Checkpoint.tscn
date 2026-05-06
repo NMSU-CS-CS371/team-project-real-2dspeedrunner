@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bqen64u8ymkhd"]
+
+[ext_resource type="Script" uid="uid://d3tfdkmnl66o7" path="res://scenes/checkpoint.gd" id="1_s2agh"]
+[ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="2_6we3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2agh"]
+size = Vector2(43, 34)
+
+[node name="Checkpoint" type="Area2D" unique_id=407757232]
+collision_mask = 2
+script = ExtResource("1_s2agh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156487721]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_s2agh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=984863311]
+texture = ExtResource("2_6we3g")
+region_enabled = true
+region_rect = Rect2(128, 48, 16, 16)

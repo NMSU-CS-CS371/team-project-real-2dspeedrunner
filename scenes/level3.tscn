@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b01ydmpcq331s" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_got4s"]
 [ext_resource type="Texture2D" uid="uid://bjxgqtpcn6yxi" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_07.png" id="2_e40mx"]
-[ext_resource type="PackedScene" uid="uid://vxsxwdyc7nvs" path="res://scenes/blue_platform2.tscn" id="2_y1e0c"]
+[ext_resource type="PackedScene" path="res://scenes/blue_platform2.tscn" id="2_y1e0c"]
 [ext_resource type="Texture2D" uid="uid://dhl3605l0bpxf" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_10.png" id="3_a114e"]
 [ext_resource type="Texture2D" uid="uid://cchv433d1i31n" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_12.png" id="4_y1e0c"]
 [ext_resource type="Texture2D" uid="uid://q0wgq86tr4wn" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Backgrounds/PS_Tileset_07_Background00.png" id="5_s4dsi"]
@@ -10,13 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://dg4etsp164txx" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Backgrounds/PS_Tileset_07_Background02.png" id="7_6uuvf"]
 [ext_resource type="Texture2D" uid="uid://mhfsyil3gbb7" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_05.png" id="8_got4s"]
 [ext_resource type="PackedScene" uid="uid://bqo67b0fdeehj" path="res://scenes/hud.tscn" id="8_x008a"]
-[ext_resource type="PackedScene" uid="uid://b7vmj7cyeqx71" path="res://scenes/pause_menu.tscn" id="9_atr84"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_atr84"]
 [ext_resource type="Texture2D" uid="uid://b4o1yn6ma8spv" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Tilesets/PS_Tileset_01_Full.png" id="9_e40mx"]
 [ext_resource type="PackedScene" uid="uid://icquqad8k0u1" path="res://scenes/stopwatch.tscn" id="10_qyu38"]
 [ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="11_8vbrh"]
 [ext_resource type="PackedScene" uid="uid://dl72sxxwv8ir4" path="res://scenes/killzone_2.tscn" id="12_d5gix"]
 [ext_resource type="AudioStream" uid="uid://ci34ab48cl3cv" path="res://funkyspacemusic.wav" id="13_7hs6g"]
 [ext_resource type="PackedScene" uid="uid://b6ag5bciy68jj" path="res://scenes/blue_platform.tscn" id="16_a114e"]
+[ext_resource type="PackedScene" uid="uid://bqen64u8ymkhd" path="res://scenes/Checkpoint.tscn" id="18_07lh1"]
 [ext_resource type="PackedScene" uid="uid://c8ob1sdr5thpp" path="res://scenes/finishlvl3.tscn" id="18_s4dsi"]
 
 [sub_resource type="Animation" id="Animation_y1e0c"]
@@ -2980,7 +2981,7 @@ layer_1/tile_data = PackedInt32Array(-65535, 65544, 18, -65534, 65544, 18, -6553
 [node name="Stopwatch" parent="." unique_id=698125718 instance=ExtResource("10_qyu38")]
 
 [node name="player" parent="." unique_id=1735387157 instance=ExtResource("11_8vbrh")]
-position = Vector2(-2242, -1350)
+position = Vector2(-25, -60)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1391507672]
@@ -3365,6 +3366,9 @@ one_shot = true
 position = Vector2(-2296, -1407)
 scale = Vector2(0.5, 0.5)
 collision_mask = 2
+
+[node name="Checkpoint" parent="." unique_id=407757232 instance=ExtResource("18_07lh1")]
+position = Vector2(110, -23)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Killzones/killzone/Timer" to="Killzones/killzone" method="_on_timer_timeout"]

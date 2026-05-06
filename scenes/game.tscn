@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dg4etsp164txx" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Backgrounds/PS_Tileset_07_Background02.png" id="7_rysoc"]
 [ext_resource type="PackedScene" uid="uid://bpi51pxpa5itf" path="res://scenes/finish.tscn" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://bfwehvkxnqlfy" path="res://huntersassets/worldPixels/Platformer World/Platformer World/Item Icons/PS_Items.png" id="8_ir15t"]
+[ext_resource type="PackedScene" uid="uid://bqen64u8ymkhd" path="res://scenes/Checkpoint.tscn" id="16_ca42v"]
+[ext_resource type="Script" uid="uid://d3tfdkmnl66o7" path="res://scenes/checkpoint.gd" id="17_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -1983,6 +1985,9 @@ _data = {
 &"rockmove12": SubResource("Animation_twgab")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(63, 84)
+
 [node name="level1" type="Node2D" unique_id=47904612]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=104669566]
@@ -3094,6 +3099,66 @@ one_shot = true
 libraries/ = SubResource("AnimationLibrary_02fa5")
 autoplay = &"rockmove12"
 
+[node name="Checkpoint" parent="." unique_id=407757232 instance=ExtResource("16_ca42v")]
+position = Vector2(533, -158)
+collision_mask = 2
+script = ExtResource("17_rysoc")
+
+[node name="CollisionShape2D" parent="Checkpoint" index="0" unique_id=1156487721]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Sprite2D" parent="Checkpoint" index="1" unique_id=984863311]
+position = Vector2(-3, 6)
+
+[node name="Checkpoint2" parent="." unique_id=1294689535 instance=ExtResource("16_ca42v")]
+position = Vector2(926, -158)
+collision_mask = 2
+script = ExtResource("17_rysoc")
+
+[node name="CollisionShape2D" parent="Checkpoint2" index="0" unique_id=1156487721]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Sprite2D" parent="Checkpoint2" index="1" unique_id=984863311]
+position = Vector2(-3, 6)
+
+[node name="Checkpoint3" parent="." unique_id=2140545423 instance=ExtResource("16_ca42v")]
+position = Vector2(1317, -158)
+collision_mask = 2
+script = ExtResource("17_rysoc")
+
+[node name="CollisionShape2D" parent="Checkpoint3" index="0" unique_id=1156487721]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Sprite2D" parent="Checkpoint3" index="1" unique_id=984863311]
+position = Vector2(-3, 6)
+
+[node name="Checkpoint4" parent="." unique_id=661340123 instance=ExtResource("16_ca42v")]
+position = Vector2(1772, -158)
+collision_mask = 2
+script = ExtResource("17_rysoc")
+
+[node name="CollisionShape2D" parent="Checkpoint4" index="0" unique_id=1156487721]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Sprite2D" parent="Checkpoint4" index="1" unique_id=984863311]
+position = Vector2(-3, 6)
+
+[node name="Checkpoint5" parent="." unique_id=324558207 instance=ExtResource("16_ca42v")]
+position = Vector2(2271, 274)
+collision_mask = 2
+script = ExtResource("17_rysoc")
+
+[node name="CollisionShape2D" parent="Checkpoint5" index="0" unique_id=1156487721]
+position = Vector2(-1, -31)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="Sprite2D" parent="Checkpoint5" index="1" unique_id=984863311]
+position = Vector2(-3, 6)
+
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone2/Timer" to="killzone2" method="_on_timer_timeout"]
 [connection signal="timeout" from="killzone3/Timer" to="killzone3" method="_on_timer_timeout"]
@@ -3112,3 +3177,9 @@ autoplay = &"rockmove12"
 [connection signal="timeout" from="movingrock1_10/killzone4/Timer" to="movingrock1_10/killzone4" method="_on_timer_timeout"]
 [connection signal="timeout" from="movingrock1_11/killzone4/Timer" to="movingrock1_11/killzone4" method="_on_timer_timeout"]
 [connection signal="timeout" from="movingrock1_12/killzone4/Timer" to="movingrock1_12/killzone4" method="_on_timer_timeout"]
+
+[editable path="Checkpoint"]
+[editable path="Checkpoint2"]
+[editable path="Checkpoint3"]
+[editable path="Checkpoint4"]
+[editable path="Checkpoint5"]

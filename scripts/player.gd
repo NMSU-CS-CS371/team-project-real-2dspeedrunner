@@ -23,9 +23,9 @@ const MAX_JUMPS := 1
 var jumps_left := MAX_JUMPS
 
 # Wall jump (Level 1)
-const WALL_JUMP_X := 220.0     # push away from wall
-const WALL_JUMP_Y := -300.0    # upward kick (often same as JUMP_VELOCITY)
-const WALL_JUMP_LOCK_TIME := 0.08 # brief lock to prevent immediate re-stick
+const WALL_JUMP_X := 220.0
+const WALL_JUMP_Y := -300.0
+const WALL_JUMP_LOCK_TIME := 0.08
 
 # Dash
 const DASH_SPEED := 450.0
@@ -49,11 +49,24 @@ var wall_jump_lock := 0.0
 
 var max_speed := WALK_SPEED
 
-# Cached wall normal from last slide (for reliable wall jumps)
+# Cached wall normal from last slide
 var cached_wall_normal := Vector2.ZERO
+
+
+
+# --------------------
+# Checkpoint / Respawn
+# --------------------
+var respawn_position: Vector2
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var sprint_timer: Timer = $Timer
+
+
+func _ready() -> void:
+	respawn_position = global_position
+	print("Initial respawn position:", respawn_position)
+	print("In player group?:", is_in_group("player"))
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -81,7 +94,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		coyote_timer = COYOTE_TIME
 		jumps_left = MAX_JUMPS
-		can_dash = true  # dash refills on landing (Level 1 rule)
+		can_dash = true
 
 	# --------------------------------
 	# Facing / input
@@ -101,7 +114,7 @@ func _physics_process(delta: float) -> void:
 		wall_intent = max(0.0, wall_intent - delta)
 
 	# --------------------------------
-	# Sprint (avoid restarting timer every frame)
+	# Sprint
 	# --------------------------------
 	if Input.is_action_just_pressed("sprint"):
 		max_speed = SPRINT_SPEED
@@ -118,7 +131,7 @@ func _physics_process(delta: float) -> void:
 		start_dash(dir)
 
 	# --------------------------------
-	# Dash active (overrides normal movement)
+	# Dash active
 	# --------------------------------
 	if is_dashing:
 		dash_time_left -= delta
@@ -135,7 +148,7 @@ func _physics_process(delta: float) -> void:
 		return
 
 	# --------------------------------
-	# Gravity (only when not dashing)
+	# Gravity
 	# --------------------------------
 	if not is_on_floor():
 		var gravity := get_gravity()
@@ -143,18 +156,22 @@ func _physics_process(delta: float) -> void:
 			gravity *= FALL_GRAVITY_MULTIPLIER
 		velocity += gravity * delta
 
-	# Variable jump height (jump cut)
+	# Variable jump height
 	if (Input.is_action_just_released("jump") or Input.is_action_just_released("ui_up")) and velocity.y < 0.0:
 		velocity.y *= JUMP_CUT_MULTIPLIER
 
 	# --------------------------------
-	# Jump execution (buffer + coyote + wall jump)
+	# Jump execution
 	# --------------------------------
 	if jump_buffer > 0.0:
 		var can_ground_jump := (is_on_floor() or coyote_timer > 0.0)
 
-		var can_wall_jump := (not is_on_floor() and cached_wall_normal != Vector2.ZERO and wall_intent > 0.0 and wall_jump_lock <= 0.0)
-		# Wall jump: only if airborne, touching wall, and not in lockout
+		var can_wall_jump := (
+			not is_on_floor()
+			and cached_wall_normal != Vector2.ZERO
+			and wall_intent > 0.0
+			and wall_jump_lock <= 0.0
+		)
 
 		if can_ground_jump and jumps_left > 0:
 			velocity.y = JUMP_VELOCITY
@@ -163,22 +180,20 @@ func _physics_process(delta: float) -> void:
 			coyote_timer = 0.0
 
 		elif can_wall_jump:
-			# Push away from wall normal (normal points away from wall surface)
 			velocity.x = cached_wall_normal.x * WALL_JUMP_X
 			velocity.y = WALL_JUMP_Y
 			wall_jump_lock = WALL_JUMP_LOCK_TIME
 			jump_buffer = 0.0
 
 	# --------------------------------
-	# Horizontal movement (ground vs air control)
+	# Horizontal movement
 	# --------------------------------
 	var accel := ACCELERATION
 	if not is_on_floor():
 		accel *= AIR_CONTROL
 
 	if direction != 0.0:
-		# Skid if reversing
-		var is_skidding : bool = (direction != 0.0 and velocity.x != 0.0 and velocity.x * direction < 0.0)
+		var is_skidding: bool = (direction != 0.0 and velocity.x != 0.0 and velocity.x * direction < 0.0)
 		if is_skidding:
 			velocity.x = move_toward(velocity.x, 0.0, SKID_FRICTION * delta)
 		else:
@@ -186,7 +201,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, FRICTION * delta)
 
-	# Apply movement
 	move_and_slide()
 	_update_cached_wall_normal()
 	_play_anim()
@@ -211,7 +225,6 @@ func _on_timer_timeout() -> void:
 	max_speed = WALK_SPEED
 
 
-# Cache wall normal after move_and_slide() so jump logic can use it next frame
 func _update_cached_wall_normal() -> void:
 	if is_on_wall() and not is_on_floor():
 		cached_wall_normal = get_wall_normal()
@@ -227,3 +240,21 @@ func _play_anim() -> void:
 			animated_sprite.play("walk")
 	else:
 		animated_sprite.play("jump")
+
+
+# --------------------
+# Checkpoint / Respawn functions
+# --------------------
+func set_checkpoint(pos: Vector2) -> void:
+	respawn_position = pos
+	print("New respawn position set to: ", respawn_position)
+
+
+func respawn() -> void:
+	global_position = respawn_position
+	velocity = Vector2.ZERO
+
+
+func die() -> void:
+	print("Respawn at: ", respawn_position)
+	respawn()
