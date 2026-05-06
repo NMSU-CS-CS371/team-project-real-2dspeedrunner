@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://11ahm11n0hno"]
 
 [ext_resource type="Script" uid="uid://oau1qt5alkmq" path="res://scripts/level_complete_screenlvl_3.gd" id="1_qlfvh"]
-[ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="2_dc54h"]
 [ext_resource type="Texture2D" uid="uid://crjch4yg5ax5v" path="res://homemade/lvl_complete_bkgrd.png" id="2_ec1u5"]
+[ext_resource type="FontFile" uid="uid://ms6mkaqlctdi" path="res://font2/Forgore.otf" id="3_y11f0"]
 [ext_resource type="Texture2D" uid="uid://cbxqrvcmqydm5" path="res://homemade/restart.png" id="4_y11f0"]
 [ext_resource type="Texture2D" uid="uid://cv53itcw36cvs" path="res://homemade/nextmenu.png" id="5_qn4po"]
 
@@ -56,8 +56,8 @@ offset_top = 274.0
 offset_right = 150.0
 offset_bottom = 324.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_dc54h")
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_y11f0")
+theme_override_font_sizes/font_size = 60
 text = "00:00:000"
 horizontal_alignment = 1
 vertical_alignment = 1
