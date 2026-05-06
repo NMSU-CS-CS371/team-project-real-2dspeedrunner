@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://oau1qt5alkmq" path="res://scripts/level_complete_screenlvl_3.gd" id="1_qlfvh"]
 [ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="2_dc54h"]
-[ext_resource type="Texture2D" uid="uid://chelcloxljk51" path="res://pixilart-drawing.png" id="2_ec1u5"]
+[ext_resource type="Texture2D" uid="uid://crjch4yg5ax5v" path="res://homemade/lvl_complete_bkgrd.png" id="2_ec1u5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_du5ev"]
 bg_color = Color(3.6521525, 3.6521523, 3.6521513, 1)
@@ -60,9 +60,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -181.0
-offset_top = -45.0
+offset_top = 35.0
 offset_right = 181.0
-offset_bottom = 194.0
+offset_bottom = 274.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
@@ -95,34 +95,15 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dfv75")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_m6vda")
 text = "Main Menu"
 
-[node name="Label" type="Label" parent="." unique_id=976824321]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -527.5
-offset_top = -263.0
-offset_right = 527.5
-offset_bottom = -149.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_dc54h")
-theme_override_font_sizes/font_size = 71
-text = "Level Cleared"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="time_label" type="Label" parent="." unique_id=810232491]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -134.5
-offset_top = 185.0
-offset_right = 134.5
-offset_bottom = 235.0
+offset_left = -150.0
+offset_top = 274.0
+offset_right = 150.0
+offset_bottom = 324.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_dc54h")
 theme_override_font_sizes/font_size = 30
