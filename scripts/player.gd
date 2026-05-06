@@ -274,6 +274,13 @@ func respawn() -> void:
 	cached_wall_normal = Vector2.ZERO
 	animated_sprite.play("idle_2")
 
+func _play_once(anim_name: String) -> void:
+	animated_sprite.stop()
+	animated_sprite.animation = anim_name
+	animated_sprite.frame = 0
+	animated_sprite.frame_progress = 0.0
+	animated_sprite.play()
+	await animated_sprite.animation_finished
 
 func die() -> void:
 	if is_dead:
@@ -283,10 +290,9 @@ func die() -> void:
 	print("Respawn at: ", respawn_position)
 
 	velocity = Vector2.ZERO
-	animated_sprite.play("damage_2")
-	await animated_sprite.animation_finished
-
-	animated_sprite.play("dead_2")
-	await animated_sprite.animation_finished
+	
+	await _play_once("damage_2")
+	
+	await _play_once("dead_2")
 
 	respawn()
