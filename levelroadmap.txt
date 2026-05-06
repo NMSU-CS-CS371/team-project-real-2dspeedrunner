@@ -30,4 +30,15 @@ MOVEMENT:
 MECHANICS:
 - dash cancel
 
+Final implementations:
+- Maybe coins?
+- update the tutorial
+- Add sound effects
+- Maybe include more enemies
+- Add a distinct animation for running/walking, differentiate the two
+- Finish 2/3.
+- Include credits to everything used
+- Maybe add paralax for the background
+- Add an overlay, show a pause button and other statuses of the character
+
 Please feel free to write ideas in here so that we can all look at this. 

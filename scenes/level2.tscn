@@ -1264,6 +1264,7 @@ layer_1/name = "Mid"
 layer_1/tile_data = PackedInt32Array(-524240, 458752, 1, -524241, 458752, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1692549495]
+visible = false
 
 [node name="HUD" parent="CanvasLayer" unique_id=2050148801 instance=ExtResource("8_s4es8")]
 
