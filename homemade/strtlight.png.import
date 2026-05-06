@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deblyp110mtn2"
-path="res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"
+uid="uid://7edjibubnl82"
+path="res://.godot/imported/strtlight.png-bd9ddb746aad74cf28a90eddd4ee25de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"]
+source_file="res://homemade/strtlight.png"
+dest_files=["res://.godot/imported/strtlight.png-bd9ddb746aad74cf28a90eddd4ee25de.ctex"]
 
 [params]
 

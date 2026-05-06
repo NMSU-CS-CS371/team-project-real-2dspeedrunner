@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct83g3a2pg8w1"
-path="res://.godot/imported/main_menu_background.jpg-c9f3c6d42bea1a29c7aefe0b64d70004.ctex"
+uid="uid://c8u6larosq44b"
+path="res://.godot/imported/strtdark.png-71e6e589bb9eda1234d44897fca1dd3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-c9f3c6d42bea1a29c7aefe0b64d70004.ctex"]
+source_file="res://homemade/strtdark.png"
+dest_files=["res://.godot/imported/strtdark.png-71e6e589bb9eda1234d44897fca1dd3f.ctex"]
 
 [params]
 

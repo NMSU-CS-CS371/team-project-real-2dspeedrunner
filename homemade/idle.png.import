@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkror2ql6woen"
-path="res://.godot/imported/astrowalk.png-eb45efe2cb54ead5fb94603643722875.ctex"
+uid="uid://4hw4hcm3jjho"
+path="res://.godot/imported/idle.png-043abef0656e90e743ebcb2db70f9523.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://astrowalk.png"
-dest_files=["res://.godot/imported/astrowalk.png-eb45efe2cb54ead5fb94603643722875.ctex"]
+source_file="res://homemade/idle.png"
+dest_files=["res://.godot/imported/idle.png-043abef0656e90e743ebcb2db70f9523.ctex"]
 
 [params]
 

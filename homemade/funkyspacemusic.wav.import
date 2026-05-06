@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ci34ab48cl3cv"
-path="res://.godot/imported/funkyspacemusic.wav-f254724615e3e6246dfe30a705ed2bf7.sample"
+path="res://.godot/imported/funkyspacemusic.wav-83ad307cf420dd4afd14cea15b5a4dc8.sample"
 
 [deps]
 
-source_file="res://funkyspacemusic.wav"
-dest_files=["res://.godot/imported/funkyspacemusic.wav-f254724615e3e6246dfe30a705ed2bf7.sample"]
+source_file="res://homemade/funkyspacemusic.wav"
+dest_files=["res://.godot/imported/funkyspacemusic.wav-83ad307cf420dd4afd14cea15b5a4dc8.sample"]
 
 [params]
 

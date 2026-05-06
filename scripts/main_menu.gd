@@ -10,14 +10,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_start_pressed() -> void:
+func _on_start2_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
 
-
-func _on_settings_pressed() -> void:
+func _on_options2_pressed() -> void:
 	pass # Replace with function body.
 
 
-func _on_quit_pressed() -> void:
+func _on_quit2_pressed() -> void:
 	get_tree().quit()
+	pass # Replace with function body.

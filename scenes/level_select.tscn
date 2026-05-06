@@ -1,12 +1,8 @@
 [gd_scene format=3 uid="uid://dnhumrhjlj6hv"]
 
 [ext_resource type="Script" uid="uid://cefo3ulpi3v50" path="res://scripts/level_select.gd" id="1_2epne"]
-[ext_resource type="Texture2D" uid="uid://ct83g3a2pg8w1" path="res://main_menu_background.jpg" id="2_rif6e"]
+[ext_resource type="Texture2D" uid="uid://chelcloxljk51" path="res://pixilart-drawing.png" id="2_2epne"]
 [ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="3_chg43"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r77uv"]
-texture = ExtResource("2_rif6e")
-modulate_color = Color(0.33809972, 0.3380997, 0.33809966, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64kqf"]
 bg_color = Color(3.6521525, 3.6521523, 3.6521513, 1)
@@ -77,14 +73,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2epne")
 
-[node name="Panel" type="Panel" parent="." unique_id=1566884127]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_r77uv")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2035724909]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 646.0
+texture = ExtResource("2_2epne")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2062977614]
 layout_mode = 1
