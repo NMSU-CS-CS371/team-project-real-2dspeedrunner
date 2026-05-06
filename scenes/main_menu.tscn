@@ -1,12 +1,7 @@
 [gd_scene format=3 uid="uid://bxtyfo1fbee7j"]
 
-[ext_resource type="Texture2D" uid="uid://ct83g3a2pg8w1" path="res://main_menu_background.jpg" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://44ktlxkrq8la" path="res://scripts/main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://crl1v7sgxxhqh" path="res://brackeys_platformer_assets/fonts/abnes.ttf" id="2_fu7sn"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
-texture = ExtResource("1_7vrkn")
-modulate_color = Color(0.33809972, 0.3380997, 0.33809966, 1)
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://deblyp110mtn2" path="res://pixil-frame-0.png" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
 bg_color = Color(3.6521525, 3.6521523, 3.6521513, 1)
@@ -49,14 +44,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fu7sn")
 
-[node name="Panel" type="Panel" parent="." unique_id=1908257640]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_jix8l")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=351636689]
+layout_mode = 0
+offset_right = 1145.0
+offset_bottom = 668.0
+texture = ExtResource("2_ekxnf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=41393725]
 layout_mode = 1
@@ -117,25 +109,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
 text = "Quit
 
 "
-
-[node name="Label" type="Label" parent="." unique_id=1270436291]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -135.5
-offset_top = -263.0
-offset_right = 135.5
-offset_bottom = -149.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_fu7sn")
-theme_override_font_sizes/font_size = 71
-text = "Space Race"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
