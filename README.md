@@ -180,6 +180,11 @@ Highlights include:
 - **Goal:** To give a player a final challenge combining moving platforms, deadly obstacles, and mastery of the movement system.
 - **Focus:** The level is littered with spikes (and checkpoints) all throughout, along with many segments that offer alternative routes. A first visit would require a lot of care and caution, but after learning the routes to the level, level 3 offers the most skill expression out of all the levels.
 
+## Known Issues
+
+- Export has only been tested on macOS and Windows.
+- Additional polish may still be needed for menu transitions and level balancing.
+
 ## Authors
 
 - Hunter Morgan
