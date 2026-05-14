@@ -78,12 +78,13 @@ grow_vertical = 2
 script = ExtResource("1_myx47")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2013233893]
-layout_mode = 0
-offset_left = -141.0
-offset_top = -89.0
-offset_right = 1268.0
-offset_bottom = 691.0
-color = Color(0.5294118, 0.79607844, 0.9098039, 0.7647059)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5294118, 0.79607844, 0.9098039, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1562148392]
 layout_mode = 0
