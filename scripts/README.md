@@ -29,5 +29,4 @@ The repository root also contains `game_state.gd`, which is configured as an **a
 
 ## Notes
 
-If you are reviewing game logic, this is the main folder to inspect alongside `game_state.gd`.
 This folder alongside `game_state.gd` shows the game logic that went inside of the game. All of this logic is used and interacts with each other to produce our levels. I think most of it is self explanatory, just based off of the names. 
