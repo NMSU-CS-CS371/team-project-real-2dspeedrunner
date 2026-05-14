@@ -171,14 +171,14 @@ Highlights include:
 - **Focus:** The level starts with some simple jumps, where the player learns about variable jumping. Then the level starts introducing moving platforms which the player tests their timings and application of movement. 
 
 ### Level 2
-- **Theme:** Theme
-- **Goal:** Goal
-- **Focus:** what the level teaches/tests
+- **Theme:** Crystal Cave
+- **Goal:** To give a player a space to explore the depth of the movement system and the importance of precision.
+- **Focus:** The level starts with simple walljumping, and a few crystals (which kill the player). After a tight leap across a chasm, the rest of the level continues with tighter platforming and a very tight ending jump. There is a checkpoint after the chasm leap, as to skip the beginning introductory part.
 
 ### Level 3
-- **Theme:** theme
-- **Goal:** Goal
-- **Focus:** what the level teaches/tests
+- **Theme:** Crimson Abyss
+- **Goal:** To give a player a final challenge combining moving platforms, deadly obstacles, and mastery of the movement system.
+- **Focus:** The level is littered with spikes (and checkpoints) all throughout, along with many segments that offer alternative routes. A first visit would require a lot of care and caution, but after learning the routes to the level, level 3 offers the most skill expression out of all the levels.
 
 ## Authors
 
