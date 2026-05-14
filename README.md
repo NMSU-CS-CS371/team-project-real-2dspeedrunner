@@ -184,6 +184,8 @@ Highlights include:
 
 - Export has only been tested on macOS and Windows.
 - Additional polish may still be needed for menu transitions and level balancing.
+- Level 2/3 and even some of level 1 aren't fully polished. Would have liked to playtest and implement more "challenges" for the player. As well more interface changes. 
+- Also a lack of visual UI, but a working main menu/pause menu. 
 
 ## Authors
 
